@@ -1,0 +1,28 @@
+{
+	"name": "Reagan Paywall Eliminator",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Tear down paywalls.",
+	"background": {
+		"scripts": ["jquery.js", "background.js"]
+	},
+	"permissions": [
+		"activeTab",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://*/*","https://*/*"],
+			"js": ["jquery.js"],
+			"run_at": "document_end"
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon.png",
+			"38": "images/icon.png"
+		},
+		"default_title": "TEAR DOWN THIS PAYWALL!"
+	}
+}
